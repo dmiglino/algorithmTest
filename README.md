@@ -16,7 +16,7 @@ The System.arraycopy() was considerably more performant than the others. It take
 
 If you Eclipse or similar, proced to import the proyect and run the algorithmTest as a JUnit Test.
 Or, if you have Ant installed (in Ubuntu, just write 'sudo apt-get install ant' to install), run from command line these two commands: 
-    'ant build' and 'ant AlgorithmTest' in order to build the project and then run the tests.
+    'ant build' and 'ant AlgorithmTest' or 'ant test' in order to build the project and then run the tests.
 If not, you can compile and run with the jdk:
     javac src/algorithm/Algorithm.java (to compile)
     java -cp .:{path to your java instalation folder}/junit.jar org.junit.runner.JUnitCore AlgorithmTest
