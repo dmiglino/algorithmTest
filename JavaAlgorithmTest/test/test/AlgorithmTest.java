@@ -31,8 +31,6 @@ public class AlgorithmTest {
 		assertNotNull(result);
 		assertEquals(9, result.length);
 		assertEquals(expected, result);
-		
-		System.out.println("Rotating "+array+ " 2 positions, Result: "+result);
 	}
 
 	/**
@@ -71,6 +69,8 @@ public class AlgorithmTest {
 		assertNotNull(result);
 		assertEquals(9, result.size());
 		assertEquals(expectedList, result);
+		
+		System.out.println("Rotating "+arrayList+ " 2 positions, Result: "+result);
 	}
 
 	@Test

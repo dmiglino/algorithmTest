@@ -6,7 +6,7 @@
               as the first entry and export the buildfile again. -->
 <project basedir="." default="build" name="JavaAlgorithmTest">
     <property environment="env"/>
-    <property name="ECLIPSE_HOME" value="../../ggts-bundle/ggts-3.6.0.RELEASE/"/>
+    <property name="ECLIPSE_HOME" value="../../../ggts-bundle/ggts-3.6.0.RELEASE/"/>
     <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.6"/>
@@ -63,6 +63,22 @@
         <antcall target="build"/>
     </target>
     <target name="AlgorithmTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="test.AlgorithmTest" todir="${junit.output.dir}"/>
+            <classpath refid="JavaAlgorithmTest.classpath"/>
+        </junit>
+    </target>
+    <target name="JavaAlgorithmTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="test.AlgorithmTest" todir="${junit.output.dir}"/>
+            <classpath refid="JavaAlgorithmTest.classpath"/>
+        </junit>
+    </target>
+    <target name="test">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
